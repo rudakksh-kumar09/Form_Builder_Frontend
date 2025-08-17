@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "form-builder-frontend",
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build" }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "\\/(.*)", "dest": "/index.html" }
+  ],
+  "env": {
+    "VITE_API_URL": "https://form-builder-zhxs.onrender.com"
+  }
+}
